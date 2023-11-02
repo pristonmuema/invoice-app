@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "758347080167",
+    "project_id": "mobile-app-f3704",
+    "storage_bucket": "mobile-app-f3704.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758347080167:android:0a9df64b5e5dca1cfe9d42",
+        "android_client_info": {
+          "package_name": "com.invoice.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMgTLrnNxrKvT6Pug3xe5deLCO4vTTtQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
