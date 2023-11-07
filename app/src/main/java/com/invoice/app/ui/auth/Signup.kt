@@ -26,6 +26,7 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
@@ -42,7 +43,7 @@ import com.invoice.app.data.Resource
 import com.invoice.app.R
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SignupScreen(viewModel: AuthViewModel, navController: NavHostController) {
     var name by remember { mutableStateOf("") }
@@ -205,7 +206,8 @@ fun SignupScreen(viewModel: AuthViewModel, navController: NavHostController) {
             text = stringResource(id = R.string.already_have_account),
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center,
-            color = MaterialTheme.colorScheme.onSurface
+            color = MaterialTheme.colorScheme.onSurface,
+            textDecoration = TextDecoration.Underline
         )
 
         signupFlow.value?.let {

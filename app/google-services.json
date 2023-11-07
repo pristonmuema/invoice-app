@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "758347080167",
-    "project_id": "mobile-app-f3704",
-    "storage_bucket": "mobile-app-f3704.appspot.com"
+    "project_number": "525802195486",
+    "firebase_url": "https://mobile-app-dff74-default-rtdb.firebaseio.com",
+    "project_id": "mobile-app-dff74",
+    "storage_bucket": "mobile-app-dff74.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:758347080167:android:0a9df64b5e5dca1cfe9d42",
+        "mobilesdk_app_id": "1:525802195486:android:b91794a00025d80a1a3c0f",
         "android_client_info": {
           "package_name": "com.invoice.app"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAMgTLrnNxrKvT6Pug3xe5deLCO4vTTtQE"
+          "current_key": "AIzaSyAscQ7MRxvE-b8f_WLs8nOGvE-Esim_D0M"
         }
       ],
       "services": {

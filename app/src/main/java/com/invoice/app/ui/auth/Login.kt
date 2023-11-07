@@ -24,6 +24,7 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
@@ -152,7 +153,10 @@ fun LoginScreen(viewModel: AuthViewModel, navController: NavController) {
                 width = Dimension.fillToConstraints
             }
         ) {
-            Text(text = stringResource(id = R.string.login), style = MaterialTheme.typography.titleMedium)
+            Text(
+                text = stringResource(id = R.string.login),
+                style = MaterialTheme.typography.titleMedium
+            )
         }
 
 
@@ -172,7 +176,8 @@ fun LoginScreen(viewModel: AuthViewModel, navController: NavController) {
             text = stringResource(id = R.string.dont_have_account),
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center,
-            color = MaterialTheme.colorScheme.onSurface
+            color = MaterialTheme.colorScheme.onSurface,
+            textDecoration = TextDecoration.Underline
         )
 
         loginFlow.value?.let {
@@ -180,11 +185,13 @@ fun LoginScreen(viewModel: AuthViewModel, navController: NavController) {
                 is Resource.Failure -> {
                     Toast.makeText(context, it.exception.message, Toast.LENGTH_LONG).show()
                 }
+
                 is Resource.Success -> {
                     LaunchedEffect(Unit) {
                         context.startNewActivity(HomeActivity::class.java)
                     }
                 }
+
                 Resource.Loading -> {
                     CircularProgressIndicator(modifier = Modifier.constrainAs(refLoader) {
                         top.linkTo(parent.top)

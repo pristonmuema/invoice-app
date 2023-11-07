@@ -261,7 +261,7 @@ fun ManageMyBusiness(viewModel: MyBusinessesViewModel, navController: NavControl
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = spacing.xLarge, end = spacing.xLarge)
+                .padding(start = spacing.medium, end = spacing.medium)
                 .bringIntoViewRequester(bringIntoViewRequester),
             enabled = areInputsValid.value
         ) {

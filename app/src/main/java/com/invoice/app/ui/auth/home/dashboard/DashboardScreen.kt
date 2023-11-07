@@ -113,12 +113,12 @@ fun DashboardCard(@DrawableRes icon: Int, title: String, value: String) {
             Text(
                 text = title,
                 textAlign = TextAlign.Center,
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.constrainAs(refTitle) {
                     top.linkTo(refIcon.top)
                     start.linkTo(refIcon.end, spacing.medium)
                     end.linkTo(parent.end, spacing.medium)
-                    width = Dimension.fillToConstraints
+                    width = Dimension.wrapContent
                 }
             )
 
@@ -131,7 +131,7 @@ fun DashboardCard(@DrawableRes icon: Int, title: String, value: String) {
                     start.linkTo(refTitle.start, spacing.medium)
                     end.linkTo(refTitle.end, spacing.medium)
                     bottom.linkTo(refIcon.bottom)
-                    width = Dimension.fillToConstraints
+                    width = Dimension.wrapContent
                 }
             )
         }
@@ -142,7 +142,7 @@ fun DashboardCard(@DrawableRes icon: Int, title: String, value: String) {
 @Composable
 fun HomeScreenPreviewLight() {
     AppTheme {
-        DashboardCard(icon = R.drawable.ic_invoice, title = "Total Invoices", value = "70")
+        DashboardCard(icon = R.drawable.ic_invoice, title = "Total Invoices", value = "7000000.000")
         //Dashboard(FakeViewModelProvider.provideDashboardViewModel())
     }
 }

@@ -85,7 +85,8 @@ fun CustomerPreviewLight() {
                 name = "John doe",
                 address = "Stone, Zanzibar",
                 email = "johndoe@gmail.com",
-                phone = "678340154535"
+                phone = "678340154535",
+                img = ""
             )
         ) { }
     }
@@ -100,7 +101,8 @@ fun CustomerPreviewDark() {
                 name = "James Bond",
                 address = "Washington, US",
                 email = "jamebond@gmail.com",
-                phone = "5340154535"
+                phone = "5340154535",
+                img = ""
             )
         ) { }
     }

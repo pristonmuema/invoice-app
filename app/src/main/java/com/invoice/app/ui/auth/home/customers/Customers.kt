@@ -28,7 +28,6 @@ import com.invoice.app.ui.theme.AppTheme
 import com.invoice.app.ui.utils.toast
 import com.invoice.app.R
 
-@OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun Customers(viewModel: CustomersViewModel, navController: NavController) {

@@ -179,7 +179,7 @@ fun ManageTaxes(viewModel: TaxesViewModel, navController: NavController) {
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = spacing.xLarge, end = spacing.xLarge)
+                .padding(start = spacing.medium, end = spacing.medium)
                 .bringIntoViewRequester(bringIntoViewRequester),
             enabled = areInputsValid.value
         ) {

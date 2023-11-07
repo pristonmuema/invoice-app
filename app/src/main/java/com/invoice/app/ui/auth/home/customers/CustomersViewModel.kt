@@ -21,6 +21,7 @@ class CustomersViewModel @Inject constructor(
     var address = MutableStateFlow("")
     var phone = MutableStateFlow("")
     var email = MutableStateFlow("")
+    var img = MutableStateFlow("")
 
     private val _isUpdating = MutableStateFlow<String?>(null)
     val isUpdating: StateFlow<String?> = _isUpdating
@@ -51,14 +52,14 @@ class CustomersViewModel @Inject constructor(
 
     fun addCustomer() = viewModelScope.launch {
         _manageCustomerResult.value = Resource.Loading
-        val customer = Customer(name.value, address.value, phone.value, email.value)
+        val customer = Customer(name.value, address.value, phone.value, email.value, img.value)
         _manageCustomerResult.value = repository.addCustomer(customer)
         getCustomers()
     }
 
     fun updateCustomer() = viewModelScope.launch {
         _manageCustomerResult.value = Resource.Loading
-        val customer = Customer(name.value, address.value, phone.value, email.value).also {
+        val customer = Customer(name.value, address.value, phone.value, email.value, img.value).also {
             it.id = _isUpdating.value ?: throw IllegalArgumentException("Business Id is null, you must call setUpdating() first")
         }
         _manageCustomerResult.value = repository.updateCustomer(customer)
@@ -81,6 +82,7 @@ class CustomersViewModel @Inject constructor(
             address.value = customer.address
             phone.value = customer.phone
             email.value = customer.email
+            img.value = customer.img
             validateInputs()
         } else {
             _isUpdating.value = null
@@ -88,6 +90,7 @@ class CustomersViewModel @Inject constructor(
             address.value = ""
             phone.value = ""
             email.value = ""
+            img.value = ""
         }
     }
 
